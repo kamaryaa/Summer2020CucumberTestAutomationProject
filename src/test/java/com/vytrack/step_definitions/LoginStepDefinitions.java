@@ -32,12 +32,19 @@ public class LoginStepDefinitions {
     @Then("user should see dashboard page")
     public void user_should_see_dashboard_page() throws InterruptedException {
         String expected ="Dashboard";
-        String actual = driver.findElement(By.className("oro-subtitle")).getText().trim();// give some spaces
+        String actual = loginPage.getPageSubTitleText().trim();// give some spaces
 
         Assert.assertEquals("Title is not correct",expected,actual);
         System.out.println("I see dashboard page!");
         Thread.sleep(3000);
         Driver.closeDrive();
+
+    }
+
+    // when user login as a "driver"
+    @When("user logs in as a {string}")
+    public void user_logs_in_as_a(String string) {
+       loginPage.login(string);
 
     }
 
