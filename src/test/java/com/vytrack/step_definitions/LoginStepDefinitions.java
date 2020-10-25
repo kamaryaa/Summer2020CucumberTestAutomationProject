@@ -22,6 +22,10 @@ public class LoginStepDefinitions {
         Driver.getDriver().get("https://qa1.vytrack.com");
 
     }
+    @Given("user is on the login page")
+    public void user_is_on_the_login_page() {
+        Driver.getDriver().get("http://qa1.vytrack.com");
+    }
 
     @When("user logs in")
     public void user_logs_in() throws InterruptedException {

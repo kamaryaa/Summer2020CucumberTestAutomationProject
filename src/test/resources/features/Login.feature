@@ -8,6 +8,6 @@ Feature: As user I want to be able to login under different roles
     @parametrized_test @BUG_VYT3242
     Scenario: Parametrized login
       Given user is on the login page
-      When user logs in as a "driver"
+      When user logs in as a "store manager"
       Then user should see dashboard page
 
