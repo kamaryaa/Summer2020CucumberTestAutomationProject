@@ -62,8 +62,7 @@ public class LoginStepDefinitions {
 
     @Then("user verifies that {string} message is displayed")
     public void user_verifies_that_message_is_displayed(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 
