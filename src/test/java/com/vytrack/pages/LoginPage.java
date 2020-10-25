@@ -18,7 +18,12 @@ public class LoginPage extends BasePage{
     @FindBy(css = "[class='alert alert-error']")
     private WebElement warningMessage;
 
-    public String getWaningMessageTest(){
+    public String getWaningMessageText(){
+        try{
+            Thread.sleep(5000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
         return  warningMessage.getText().trim();
     }
 

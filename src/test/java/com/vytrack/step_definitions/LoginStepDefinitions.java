@@ -5,12 +5,8 @@ import com.vytrack.utils.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginStepDefinitions {
 
@@ -52,6 +48,8 @@ public class LoginStepDefinitions {
 
     }
 
+    // String string2 = "wrong"
+    //Sstring string1 = "storemanager85"
     //when user logs in with "storemanager85" username and "wrong" password
     @When("user logs in with {string} username and {string} password")
     public void user_logs_in_with_username_and_password(String string, String string2) {
@@ -60,8 +58,12 @@ public class LoginStepDefinitions {
 
 
 
+    // String expected = "Invalid user name or password";
+    //Then user verifies that "Invalid user name or password." message is displayed
     @Then("user verifies that {string} message is displayed")
-    public void user_verifies_that_message_is_displayed(String string) {
+    public void user_verifies_that_message_is_displayed(String expected) {
+        String actualResult = loginPage.getWaningMessageText();
+        Assert.assertEquals(expected,actualResult);
 
     }
 
