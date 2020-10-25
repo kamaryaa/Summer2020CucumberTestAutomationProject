@@ -29,6 +29,8 @@ public class Driver {
         }
         return driver;
     }
+
+
     public static void closeDrive(){
         if(driver !=null){
             driver.quit();
