@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/vytrack/step_definitions",
-        dryRun = false
+        dryRun = true,
+        tags = "@negative_login"
 
 )
 public class CucumberRunner {
