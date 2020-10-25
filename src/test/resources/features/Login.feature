@@ -11,3 +11,9 @@ Feature: As user I want to be able to login under different roles
       When user logs in as a "store manager"
       Then user should see dashboard page
 
+      @negative_login
+      Scenario: Invalid password
+        Given user is on the login page
+        When user logs in with "storemanager85" username and "wrong" password
+        Then user verifies that "Invalid user name or password." message is displayed
+
