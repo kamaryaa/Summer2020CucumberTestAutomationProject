@@ -36,6 +36,10 @@ public class CreateCarStepDefinitions {
     //     * DataTable - cucumber data structure/data type. We convert it into Map, List or List<Map<>>
     @When("user adds new vehicle information")
     public void user_adds_new_vehicle_information(Map<String,String> dataTable) {
+        //to get all keys and values one by one
+        dataTable.forEach((k,v) -> System.out.println("Key: "+k+", value: "+v));
+        System.out.println("License plate: "+ dataTable.get("License Plate"));
+        System.out.println("Model year: "+dataTable.get("Model Year"));
 
     }
 }
