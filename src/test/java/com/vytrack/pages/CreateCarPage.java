@@ -20,8 +20,16 @@ public class CreateCarPage extends BasePage {
 
 
     public void clickOnCreateCar(){
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),2);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),20);
         wait.until(ExpectedConditions.elementToBeClickable(createCarBrn)).click();
         System.out.println("Clicking on 'Create Car' button");
+    }
+
+    public void enterLicencePlate(String licensePlate){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
+        wait.until(ExpectedConditions.elementToBeClickable(licencePlateInputBox)).click();
+
+        licencePlateInputBox.clear();
+        licencePlateInputBox.sendKeys(licensePlate);
     }
 }
