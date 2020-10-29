@@ -9,5 +9,5 @@ Feature:As user, I want to be able to create new cars
     And user navigates to "Fleet" and "Vehicles"
     And user clicks on create car button
     When user adds new vehicle information
-    |License Plate|     |SDET|
+    |License Plate|    |SDET|
     |Model Year   |    |2021|

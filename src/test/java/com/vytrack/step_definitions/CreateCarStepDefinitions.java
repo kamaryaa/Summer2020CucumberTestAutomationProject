@@ -1,16 +1,41 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.pages.CreateCarPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import java.util.Map;
 
 public class CreateCarStepDefinitions {
+
+    CreateCarPage createCarPage = new CreateCarPage();
     @Given("user clicks on create car button")
     public void user_clicks_on_create_car_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        createCarPage.clickOnCreateCar();
+
     }
+    // When user adds new vehicle information
+    //    |License Plate|    |SDET|
+    //    |Model Year   |    |2021|
+    // map is a data structure where every value is referred by key
+
+    //in arraylist it's always index)
+    //     * dataTable = { License Plate = SDET,
+    //     * Model Year = 2021 }
+    //     * <p>
+    //     * If you want to turn data table into map, it must be exactly 2 columns
+    //     * <p>
+    //     * If it's a 1 column, it can be just List:
+    //     * <p>
+    //     * Then user verifies following list:
+    //     * |10|
+    //     * |20|
+    //     * |50|
+    // * @Then("user verifies following list:")
+    //     * public void user_verifies_following_list(List<String> dataTable){}
+    //     * <p>
+    //     * DataTable - cucumber data structure/data type. We convert it into Map, List or List<Map<>>
     @When("user adds new vehicle information")
-    public void user_adds_new_vehicle_information(io.cucumber.datatable.DataTable dataTable) {
+    public void user_adds_new_vehicle_information(Map<String,String> dataTable) {
 
     }
 }
