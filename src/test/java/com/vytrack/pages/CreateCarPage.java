@@ -12,7 +12,7 @@ public class CreateCarPage extends BasePage {
     @FindBy(css = "[title='Create Car']")
     private WebElement createCarBtn;
 
-    @FindBy(name = "custom_entity_type[L icensePlate]")
+    @FindBy(name = "custom_entity_type[LicensePlate]")
     private WebElement licencePlateInputBox;
 
     @FindBy(name = "custom_entity_type[ModelYear]")

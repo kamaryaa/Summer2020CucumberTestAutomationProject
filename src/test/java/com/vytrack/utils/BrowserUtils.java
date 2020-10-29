@@ -1,9 +1,14 @@
 package com.vytrack.utils;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.FileOutputStream;
+import java.util.Date;
 
 public class BrowserUtils {
     private static WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
