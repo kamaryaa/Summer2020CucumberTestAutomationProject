@@ -8,31 +8,29 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Driver {
     private static WebDriver driver;
 
-    public Driver() { }
+    private Driver() {}
 
-    public static WebDriver getDriver(){
-        if(driver ==null){
+    public static WebDriver getDriver() {
+        if (driver == null) {
             String browser = ConfigurationReader.getProperty("browser");
-            switch (browser){
+            switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
-                case"firefox":
+                case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 default:
-                    throw new RuntimeException("No such a browser yet");
-
+                    throw new RuntimeException("No such a browser yet!");
             }
         }
         return driver;
     }
 
-
-    public static void closeDrive(){
-        if(driver !=null){
+    public static void closeDriver() {
+        if (driver != null) {
             driver.quit();
             driver = null;
         }

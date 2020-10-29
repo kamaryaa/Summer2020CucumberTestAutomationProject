@@ -10,31 +10,29 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class CreateCarPage extends BasePage {
 
     @FindBy(css = "[title='Create Car']")
-    private WebElement createCarBrn;
+    private WebElement createCarBtn;
 
-    @FindBy(name = "custom_entity_type[LicensePlate]")
+    @FindBy(name = "custom_entity_type[L icensePlate]")
     private WebElement licencePlateInputBox;
 
     @FindBy(name = "custom_entity_type[ModelYear]")
-    private  WebElement modelYearInputBox;
+    private WebElement modelYearInputBox;
 
-
-
-    public void clickOnCreateCar(){
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),20);
-        wait.until(ExpectedConditions.elementToBeClickable(createCarBrn)).click();
-        System.out.println("Clicking on 'Create Car' button");
-    }
-
-    public void enterLicencePlate(String licensePlate){
+    public void clickOnCreateCar() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
-        wait.until(ExpectedConditions.elementToBeClickable(licencePlateInputBox)).click();
-
-        licencePlateInputBox.clear();
-        licencePlateInputBox.sendKeys(licensePlate);
+        wait.until(ExpectedConditions.elementToBeClickable(createCarBtn)).click();
+        System.out.println("Clicking on 'Create car' button");
     }
-    public void enterModelYear(String modelYear){
-        BrowserUtils.enterText(modelYearInputBox,modelYear);
 
+    public void enterLicensePlate(String licensePlate) {
+        BrowserUtils.enterText(licencePlateInputBox, licensePlate);
     }
+
+    public void enterModelYear(String modelYear) {
+        BrowserUtils.enterText(modelYearInputBox, modelYear);
+    }
+
+    /**
+     * sometimes, for very longs string webdriver might enter text not fully.
+     */
 }
