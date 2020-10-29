@@ -41,5 +41,8 @@ public class CreateCarStepDefinitions {
         System.out.println("License plate: "+ dataTable.get("License Plate"));
         System.out.println("Model year: "+dataTable.get("Model Year"));
 
+        createCarPage.enterLicencePlate(dataTable.get("License Plate"));
+        createCarPage.enterModelYear(dataTable.get("Model Year"));
+
     }
 }

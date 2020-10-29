@@ -1,5 +1,6 @@
 package com.vytrack.pages;
 
+import com.vytrack.utils.BrowserUtils;
 import com.vytrack.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,8 @@ public abstract class BasePage {
     @FindBy(className = "oro-subtitle")
     protected WebElement pageSubTitle;
 
+    @FindBy(xpath = "(//button[contains(text(),'Save and Close')])[1]")
+    protected   WebElement saveAndCloseBtn;
 
 
     public BasePage(){
@@ -45,6 +48,10 @@ public abstract class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(moduleElement)).click();
 
 
+    }
+
+    public void clickSaveAndClose(){
+        BrowserUtils.clickOnElement(saveAndCloseBtn);
     }
 
 
