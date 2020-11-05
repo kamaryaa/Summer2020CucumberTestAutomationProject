@@ -1,6 +1,7 @@
 package com.vytrack.step_definitions;
 
 import com.vytrack.pages.CreateCalendarEventPage;
+import com.vytrack.utils.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -34,6 +35,7 @@ public class CreateCalendarStepDefinitions {
     }
     @Then("user verifies that new calendar event is displayed:")
     public void user_verifies_that_new_calendar_event_is_displayed(Map<String, String> data) {
+        BrowserUtils.wait(4);
         String title = data.get("Title");
         String description = data.get("Description");
 
