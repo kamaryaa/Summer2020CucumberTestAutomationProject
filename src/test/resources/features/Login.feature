@@ -61,5 +61,9 @@ Feature: As user I want to be able to login under different roles
       | username | password | message                        |
       | wrong    | bad      | Invalid user name or password. |
       | wrong    | bad      | Invalid user name or password. |
+      | wrong213 | bad      | Invalid user name or password. |
+      | wrong32  | bad      | Invalid user name or password. |
+      | wrong12  | bad      | Invalid user name or password. |
+
     # can run as many number as how many examples we have in scenario outline
 
