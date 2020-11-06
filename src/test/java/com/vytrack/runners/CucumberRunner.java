@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/vytrack/step_definitions",
+        tags = "@s_o and @with_two_columns",
         dryRun = false,
         publish = true
 )
