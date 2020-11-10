@@ -24,7 +24,6 @@ Feature: As user, I want to be able to create new cars
 
     Examples: auto test data
       | license Plate | model Year | role          |
-      | FLORIDA       | 2020       | store manager |
       | QA            | 2021       | store manager |
       | RAMAZAN       | 2030       | store manager |
       | SDET          | 1999       | sales manager |

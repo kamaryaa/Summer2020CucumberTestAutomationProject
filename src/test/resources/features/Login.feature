@@ -30,7 +30,7 @@ Feature: As user I want to be able to login under different roles
       | role          |
       | sales manager |
       | store manager |
-      | driver        |
+
 
   @s_o @with_two_columns
   Scenario Outline: Parametrized login as <role>
@@ -38,10 +38,10 @@ Feature: As user I want to be able to login under different roles
     Then user should see "<page_title>" page
 
     Examples:
-      | role          | page_title      |
-      | sales manager | Dashboard       |
-      | store manager | Dashboard       |
-      | driver        | Quick Launchpad |
+      | role          | page_title |
+      | sales manager | Dashboard  |
+      | store manager | Dashboard  |
+
     # role --> variable . you can name parameters as you want .Scenario:
   #1st row always reserved for parameters
       #auto formatting on mac: command +option +L
